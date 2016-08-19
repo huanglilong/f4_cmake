@@ -22,7 +22,7 @@ set(CMAKE_BUILD_TYPE Debug)
 # find stm32's package -- library and header files
 find_package(CMSIS REQUIRED)
 
-INCLUDE_DIRECTORIES(
+include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}
     ${CMSIS_INCLUDE_DIRS}
 )
