@@ -21,17 +21,19 @@ set(CMAKE_BUILD_TYPE Debug)
 
 # find stm32's package -- library and header files
 find_package(CMSIS REQUIRED)
+find_package(STM32HAL COMPONENTS gpio REQUIRED)
 
 include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}
     ${CMSIS_INCLUDE_DIRS}
+	${STM32HAL_INCLUDE_DIR}
 )
 
 set(PROJECT_SOURCES
     main.c
 )
 
-add_executable(${CMAKE_PROJECT_NAME} ${PROJECT_SOURCES} ${CMSIS_SOURCES})
+add_executable(${CMAKE_PROJECT_NAME} ${PROJECT_SOURCES} ${CMSIS_SOURCES} ${STM32HAL_SOURCES})
 
 # set linker script
 STM32_LINKER_SCRIPT(${CMAKE_PROJECT_NAME})
