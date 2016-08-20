@@ -5,11 +5,11 @@
 #
 
 ####### Notes ########
-# what is find_package() command do?
-# 1. collect header files 
-# 2. collect source files 
-# 3. get header files's include directory path and save in  <package>_INCLUDE_DIR variable
-# 4. get each source files's absolute path and save in <package>_SOURCES variable
+# what find_package() command do?
+# 1. collects header files 
+# 2. collects source files 
+# 3. gets header files's include directory path and save in  <package>_INCLUDE_DIR variable
+# 4. gets each source files's absolute path and save in <package>_SOURCES variable
 #
 if(STM32_FAMILY STREQUAL "F4")
 	set(HAL_COMPONENTS adc can cec cortex crc cryp dac dcmi dma dma2d eth flash
