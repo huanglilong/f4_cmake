@@ -31,6 +31,8 @@ include_directories(
 
 set(PROJECT_SOURCES
     main.c
+	stm32f429i_discovery.c
+	stm32f4xx_it.c
 )
 
 add_executable(${CMAKE_PROJECT_NAME} ${PROJECT_SOURCES} ${CMSIS_SOURCES} ${STM32HAL_SOURCES})
